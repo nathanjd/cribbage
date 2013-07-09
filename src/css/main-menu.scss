@@ -1,0 +1,44 @@
+h1 {
+
+}
+
+.sidebar {
+  @include media($desktop) {
+    @include span-columns(4);
+  }
+  @include media($tablet) {
+    @include span-columns(3);
+  }
+  @include media($mobile) {
+    @include span-columns(2);
+  }
+  h3 {
+
+  }
+  .player-list {
+
+    li {
+
+    }
+  }
+
+  .add-player {
+
+  }
+  .start-game {
+
+  }
+}
+
+.preview {
+  @include omega;
+  @include media($desktop) {
+    @include span-columns(8);
+  }
+  @include media($tablet) {
+    @include span-columns(5);
+  }
+  @include media($mobile) {
+    @include span-columns(2);
+  }
+}
