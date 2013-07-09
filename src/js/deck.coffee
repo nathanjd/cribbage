@@ -1,5 +1,4 @@
 define ['card'], (Card) ->
-  # public interface
   class Deck
     # returns a standard deck of 52 cards.
     constructor: ->
@@ -14,12 +13,4 @@ define ['card'], (Card) ->
 
     draw: -> @cards.pop()
 
-    shuffle: ->
-      randomlySwap = (index) ->
-        target = Math.floor(Math.random() * @cards.length)
-        swap = @cards[target]
-
-        @cards[target] = @cards[index]
-        @cards[index] = swap
-
-      randomlySwap i for i in [0...@cards.length]
+    shuffle: -> @cards = _.shuffle @cards
